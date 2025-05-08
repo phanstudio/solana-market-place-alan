@@ -1,0 +1,13 @@
+[lib]
+crate-type = ["cdylib", "lib"]
+
+[package]
+name = "DrcWasm"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+js-sys = "0.3.77"
+wasm-bindgen = "0.2.100"
+wasm-bindgen-futures = "0.4.50"
+
