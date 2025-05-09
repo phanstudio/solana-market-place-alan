@@ -1,19 +1,21 @@
 import { useState } from "react";
 import { Bell, MessageSquare, Menu, X } from "lucide-react";
 import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
+import { Link } from "react-router-dom";
 
 export default function Header() {
 	const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
 	return (
-		<header className='bg-[#0e0f14] text-white px-4 py-3 shadow-md'>
+		<header className='bg-custom-dark-blue text-white px-4 py-3 shadow-md'>
 			<div className='max-w-7xl mx-auto flex items-center justify-between'>
 				{/* Logo and Toggle */}
 				<div className='flex items-center justify-between w-full md:w-auto'>
-					<span className='text-xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent'>
-						Notty Terminal
-					</span>
-
+					<Link to={'/'}>
+						<span className='text-2xl font-bold bg-gradient-to-r from-[#a4b9fa] to-[#4a0a80] bg-clip-text text-transparent'>
+							Notty Terminal
+						</span>
+					</Link>
 					{/* Mobile toggle */}
 					<button
 						className='md:hidden text-gray-300'
